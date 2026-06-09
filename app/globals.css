@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+@font-face {
+  font-family: "Coolvetica";
+  src: url("/fonts/coolvetica-rg.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Signatrue";
+  src: url("/fonts/Signatrue.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --background: 255 255 255;
+  --foreground: 15 23 42;
+  --surface: 255 255 255;
+  --surface-elevated: 248 250 252;
+  --border: 226 232 240;
+  --muted: 71 85 105;
+  --muted-foreground: 100 116 139;
+  --inverse: 15 23 42;
+  --inverse-foreground: 255 255 255;
+}
+
+html.dark {
+  color-scheme: dark;
+  --background: 6 10 20;
+  --foreground: 241 245 249;
+  --surface: 15 23 42;
+  --surface-elevated: 17 28 49;
+  --border: 51 65 85;
+  --muted: 148 163 184;
+  --muted-foreground: 203 213 225;
+  --inverse: 248 250 252;
+  --inverse-foreground: 15 23 42;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: rgb(var(--background));
+  min-height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Coolvetica", Inter, sans-serif;
+}
+
+.font-signatrue {
+  font-family: "Signatrue", "Coolvetica", Inter, sans-serif;
+}
+
+.font-coolvetica {
+  font-family: "Coolvetica", Inter, sans-serif;
+}
+
+body {
+  background: rgb(var(--background));
+  color: rgb(var(--foreground));
+  min-height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  transition:
+    background-color 300ms ease,
+    color 300ms ease,
+    border-color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+html.theme-transition *,
+html.theme-transition *::before,
+html.theme-transition *::after {
+  transition-property: background-color, border-color, color, fill, stroke, box-shadow, text-decoration-color;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+
+::selection {
+  background: rgba(95, 70, 231, 0.16);
+  color: rgb(var(--foreground));
+}
