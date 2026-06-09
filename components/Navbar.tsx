@@ -6,7 +6,6 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { MenuToggleIcon } from "@/components/ui/menu-toggle-icon";
 import { useScroll } from "@/components/ui/use-scroll";
 import { cn } from "@/lib/utils";
-import ThemeToggle from "@/components/theme-toggle";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -83,14 +82,12 @@ export default function Navbar() {
         </div>
 
         <div className="hidden items-center justify-self-end gap-3 md:flex">
-          <ThemeToggle />
           <Button asChild size="sm" className="h-10 flex items-center rounded-full px-5 text-base font-normal tracking-wide">
             <a href="#contact">Hire Me</a>
           </Button>
         </div>
 
         <div className="flex items-center justify-self-end gap-2 md:hidden">
-          <ThemeToggle />
           <Button
             type="button"
             size="icon"

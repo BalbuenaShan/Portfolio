@@ -26,12 +26,9 @@ export default function RootLayout({
             __html: `
 (function() {
   try {
-    var storageKey = 'portfolio-theme';
-    var storedTheme = localStorage.getItem(storageKey);
-    var systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    var theme = storedTheme === 'dark' || storedTheme === 'light' ? storedTheme : systemPrefersDark ? 'dark' : 'light';
+    var theme = 'light';
     var root = document.documentElement;
-    root.classList.toggle('dark', theme === 'dark');
+    root.classList.remove('dark');
     root.dataset.theme = theme;
     root.style.colorScheme = theme;
   } catch (error) {}
