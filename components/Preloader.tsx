@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
-const EXIT_DURATION = 500;
+const EXIT_DURATION = 1000;
 
 export default function Preloader() {
   const [shouldRender, setShouldRender] = useState(true);
